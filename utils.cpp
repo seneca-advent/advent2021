@@ -13,8 +13,8 @@ size_t readLines(const char* fname, char* line[],int max){
 	}
 	else{
 		size_t len;
-		char currLine[1000];
-		while(rc<max && fp.getline(currLine, 1000, '\n')){
+		char currLine[LINEWIDTH];
+		while(rc<max && fp.getline(currLine, LINEWIDTH, '\n')){
 			len=strlen(currLine);
 			line[rc]=new char[len+1];
 			strcpy(line[rc],currLine);
